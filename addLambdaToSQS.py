@@ -19,6 +19,4 @@ def addLambdaToSQS(lambdaString, sqsARN):
     
     response = client.create_event_source_mapping(EventSourceArn=sqsARN, FunctionName=lambdaString,   Enabled=True,   BatchSize=1)
     
-    print(response)
-    
     return True
